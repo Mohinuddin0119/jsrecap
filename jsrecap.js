@@ -70,7 +70,7 @@ console.log(...numbers)
 const newNum = [...numbers,10,100]
 console.log(newNum)
 console.log(...newNum)
-*/
+
 // array methods
 const products = [
     {name:'redmi',brand:'xiami',price:10000},
@@ -81,10 +81,10 @@ const products = [
     {name:'Iphone',brand:'Iphone',price:50000}
 ]
 
-// map work just like filter and returns in array
+// map work and returns in array
 const result = products.map(product => product.price)
 console.log(result)
-// forEach work just like and does not return in array
+// forEach work  and does not return in array
 products.forEach(product => console.log(product.brand))
 // filter work condition based and returns in array
 const res = products.filter(pro => pro.price > 20000)
@@ -92,3 +92,21 @@ console.log(res)
 // find work condition based but returns one elements
 const res2 = products.find(product => product.brand === 'xiami')
 console.log(res2)
+*/
+// Array destructuring
+const classMates = ['Mahi','Mohin','Sayel','Hasan']
+// index important
+const [element4,element3,element2,element1] = classMates
+console.log(element3,element4)
+
+// object destructring
+const student ={
+    name:'mohin',
+    age:21,
+    country:'Bangladesh',
+    friends:['mahi','salman','Rohan']
+}
+
+const {name,friends,age,country}= student
+console.log(name)
+console.log(friends)
