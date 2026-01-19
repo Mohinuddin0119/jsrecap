@@ -92,7 +92,7 @@ console.log(res)
 // find work condition based but returns one elements
 const res2 = products.find(product => product.brand === 'xiami')
 console.log(res2)
-*/
+
 // Array destructuring
 const classMates = ['Mahi','Mohin','Sayel','Hasan']
 // index important
@@ -110,3 +110,60 @@ const student ={
 const {name,friends,age,country}= student
 console.log(name)
 console.log(friends)
+
+// json
+const person = {
+    name:'Mohin',
+    age:21,
+    country:'Bangladesh',
+    friend:{
+        name:'solim',
+        father:'korim'
+    }
+}
+// convert string
+const newStr = JSON.stringify(person)
+console.log(newStr)
+// convert main element
+const planData = JSON.parse(newStr)
+console.log(planData)
+
+// fetch
+// fetch('url');
+// .then(res => res.JSON())
+// .then(data => console.log(data))
+
+// Keys
+const student = {
+    name:'Rohan',
+    age:21,
+    country:'Bangladesh',
+    friends:['mahi','salman','sayel']
+}
+const justKeys = Object.keys(student)
+console.log(justKeys)
+// values
+const justValues = Object.values(student)
+console.log(justValues)
+*/
+const phones = [
+    {name:'xiami',brand:'xiami',price:10000},
+    {name:'apple',brand:'apple',price:100000},
+    {name:'honor',brand:'honor',price:20000},
+    {name:'samsung',brand:'samsung',price:30000}
+]
+// add elements 
+const newPhone = {
+    name:'Walton',
+    brand:'walton',
+    price:5000
+}
+const addedPhone = [...phones,newPhone]
+console.log(addedPhone)
+
+// remove elements using condition
+const removePhone = phones.filter(phone => phone.brand !== 'apple')
+console.log(removePhone)
+
+const newPhones = [...removePhone,newPhone]
+console.log(newPhones)
